@@ -93,7 +93,10 @@ class MyAppState extends State<MyApp> {
         unselectedItemColor: Color.fromRGBO(51, 51, 51, 0.5),
         onTap: (int index) {
           // Uso del setState para redibujar el Widget.
-          setState(() => selectedPage = index);
+          setState((){
+            selectedPage = index;
+            pages = obtenerPaginas();
+          });
         },
         backgroundColor: Colors.blueGrey,
         type: BottomNavigationBarType.fixed,
@@ -142,6 +145,13 @@ class MyAppState extends State<MyApp> {
       p.add(Posteo(usuario, imagen, contenido));
     }
     return p;
+  }
+
+  List<Widget> obtenerPaginas(){
+    return [Favoritos(favoritos),
+      Feed(posteos, favoritos, reposteados),
+      Reposteos(reposteados)
+    ];
   }
 }
 
