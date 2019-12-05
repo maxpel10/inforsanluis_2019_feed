@@ -35,4 +35,3 @@ Funcionalidades que deben ser agregadas:
    
    * Tal como vimos en el ejemplo de la segunda parte de la clase 2, implementar una lista de favoritos y adicionalmente una lista de reposteos. Los posteos agregados a la lista de favoritos deberán ser mostrados en la sección Favoritos y los posteos agregados a la lista de repostes deberán ser mostrados en la sección de Reposteos. Ambas secciones son accesibles desde el BottomBar.
 
-   * Opcional: hacer que el feed sea una lista infinita.
